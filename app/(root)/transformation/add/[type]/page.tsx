@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AddTransformationsPage = () => {
+const AddTransformationsPage = (children : React.ReactNode) => {
   return (
-    <div>AddTransformationsPage</div>
+    <div>AddTransformationsPage {children}l</div>
   )
 }
 
