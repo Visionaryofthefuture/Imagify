@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import logo from "@/assets/bird_2.jpg"
 import { navLinks } from '@/constants/routes'
+import "@/app/globals.css"
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
@@ -31,21 +32,22 @@ const SIdebar = () => {
                       return  (
                         <li key={link.route} className={`sidebar-nav_element group ${
                           active ? 'bg-purple-gradient text-white' : 'text-gray-700'
-                        }`}>     
+                        } `}>     
 
                         <Link className = "sidebar-link" href = {link.route}> {link.label}</Link>                       
                           </li>
 
                       )
                   })}
+                  <li><UserButton afterSwitchSessionUrl=" /"  showName = {true}/> </li>
+
                 </ul>
 
-                <UserButton afterSwitchSessionUrl=" /"  showName = {true}/>
+
 
                   </SignedIn>
-
-
                     <SignedOut>
+
             <Button className="flex justify-center ">
               <Link href="/sign-in">Login</Link>
             </Button>

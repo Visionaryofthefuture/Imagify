@@ -377,6 +377,14 @@
   }
 }
 
+.bg-purple-gradient {
+  background: linear-gradient(135deg, #6a0dad, #8a2be2);
+  /* Fall back for older browsers */
+  background-color: #6a0dad; /* Solid purple color */
+  color: #ffffff; /* Optional: Set text color to white for contrast */
+}
+
+
 /* =====  CLERK OVERRIDES */
 .cl-userButtonBox {
   display: flex;
